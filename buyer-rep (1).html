@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dedicated Buyer Rep | Find Your Home | Rinker Realty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--stone:#c9c4be;--espresso:#120d09;--charcoal:#2c2e30;--umber:#2f2926;--gray:#737373;--light:#f5f5f5;--cream:#fffffe;--warm:#a0836a;--gold:#b8986e;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--espresso);overflow-x:hidden;}
+.topbar{background:var(--warm);text-align:center;padding:0.55rem 1rem;font-size:0.76rem;letter-spacing:0.05em;color:var(--cream);position:fixed;top:0;left:0;right:0;z-index:200;}
+.topbar a{color:var(--cream);font-weight:600;text-decoration:none;}
+nav{position:fixed;top:32px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(18,13,9,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,196,190,0.15);}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--cream);font-size:1.3rem;letter-spacing:0.04em;text-decoration:none;}
+.nav-logo span{color:var(--stone);font-style:italic;}
+.nav-back{color:var(--stone);text-decoration:none;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--cream);}
+.nav-cta{background:var(--warm);color:var(--cream);text-decoration:none;padding:0.5rem 1.2rem;border-radius:2px;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;}
+.btn{display:inline-block;text-decoration:none;padding:0.88rem 1.9rem;font-size:0.82rem;letter-spacing:0.07em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:all 0.2s;}
+.btn-p{background:var(--warm);color:var(--cream);}
+.btn-p:hover{background:var(--gold);transform:translateY(-1px);}
+.btn-g{border:1px solid rgba(201,196,190,0.4);color:var(--stone);}
+.btn-g:hover{border-color:var(--stone);color:var(--cream);}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:66px;}
+.hero-left{background:var(--espresso);display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 4rem 5rem;}
+.eyebrow{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--warm);display:flex;align-items:center;gap:0.7rem;margin-bottom:1.5rem;}
+.eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--warm);}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,4.5rem);font-weight:900;line-height:1.07;color:var(--cream);margin-bottom:0.8rem;}
+h1 em{font-style:italic;color:var(--stone);}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--warm);margin-bottom:1.6rem;}
+.hero-desc{font-size:0.93rem;color:#9a9490;line-height:1.8;max-width:430px;margin-bottom:2rem;}
+.badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;}
+.badge{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.85rem;border:1px solid rgba(201,196,190,0.3);color:var(--stone);border-radius:2px;}
+.cta-row{display:flex;gap:0.9rem;flex-wrap:wrap;}
+.hero-right{position:relative;overflow:hidden;}
+.hero-right img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--espresso) 0%,transparent 30%);}
+/* BENEFITS */
+.benefits{padding:6rem 5rem;background:var(--light);}
+.sec-hdr{text-align:center;margin-bottom:3.5rem;}
+.sec-eye{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--warm);display:block;margin-bottom:0.8rem;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.7rem);font-weight:700;color:var(--espresso);line-height:1.2;}
+.sec-title em{font-style:italic;color:var(--gray);}
+.sec-sub{font-size:0.9rem;color:var(--gray);margin-top:0.8rem;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto;}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--stone);}
+.bc{background:var(--cream);padding:2.2rem 1.8rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.bc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--warm);transition:width 0.3s;}
+.bc:hover::after{width:100%;}
+.bc:hover{background:var(--espresso);}
+.bc:hover .bt{color:var(--cream);}
+.bc:hover .bd{color:#9a9490;}
+.bc-icon{font-size:1.7rem;margin-bottom:1.1rem;display:block;}
+.bt{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--espresso);margin-bottom:0.7rem;transition:color 0.3s;}
+.bd{font-size:0.85rem;color:var(--gray);line-height:1.75;transition:color 0.3s;}
+/* COMPARE */
+.compare{padding:6rem 5rem;background:var(--espresso);}
+.compare .sec-title{color:var(--cream);}
+.compare .sec-eye{color:var(--warm);}
+.ctable{max-width:800px;margin:3rem auto 0;border:1px solid rgba(201,196,190,0.15);border-radius:2px;overflow:hidden;}
+.ct-head{display:grid;grid-template-columns:2fr 1fr 1fr;background:rgba(201,196,190,0.08);padding:1rem 1.5rem;border-bottom:1px solid rgba(201,196,190,0.15);}
+.ct-head span{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);}
+.ct-head span:last-child{color:var(--warm);}
+.ct-row{display:grid;grid-template-columns:2fr 1fr 1fr;padding:1rem 1.5rem;border-bottom:1px solid rgba(201,196,190,0.08);align-items:center;}
+.ct-row:last-child{border-bottom:none;}
+.ct-row:hover{background:rgba(201,196,190,0.04);}
+.ct-feat{font-size:0.87rem;color:var(--stone);}
+.ct-no{font-size:1rem;color:var(--gray);text-align:center;}
+.ct-yes{font-size:1rem;color:var(--warm);text-align:center;}
+/* PROCESS */
+.process{padding:6rem 5rem;background:var(--cream);}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;}
+.steps::before{content:'';position:absolute;top:27px;left:8%;width:84%;height:1px;background:var(--light);}
+.step{text-align:center;position:relative;}
+.snum{width:54px;height:54px;border-radius:50%;background:var(--light);border:2px solid var(--warm);color:var(--warm);font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;position:relative;z-index:1;}
+.stitle{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--espresso);margin-bottom:0.65rem;}
+.sdesc{font-size:0.82rem;color:var(--gray);line-height:1.7;}
+/* FORM */
+.form-sec{padding:6rem 5rem;background:var(--light);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.fc .sec-title{text-align:left;}
+.fc .sec-eye{text-align:left;}
+.checks{display:flex;flex-direction:column;gap:0.75rem;margin:1.5rem 0 2rem;}
+.chk{display:flex;align-items:center;gap:0.75rem;font-size:0.87rem;color:var(--gray);}
+.chk span{color:var(--warm);}
+.fwrap{background:var(--espresso);padding:2.5rem;border-radius:2px;}
+.ftitle{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);margin-bottom:0.4rem;}
+.fsub{font-size:0.82rem;color:var(--gray);margin-bottom:1.8rem;line-height:1.6;}
+.fg{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:0.9rem;}
+.fg label{font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);}
+.fg input,.fg select,.fg textarea{padding:0.75rem 1rem;background:rgba(201,196,190,0.07);border:1px solid rgba(201,196,190,0.2);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:0.87rem;border-radius:2px;outline:none;transition:border-color 0.2s;width:100%;}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(201,196,190,0.3);}
+.fg select option{background:var(--espresso);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--warm);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;}
+.fsub-btn{width:100%;background:var(--warm);color:var(--cream);border:none;padding:1rem;font-family:'DM Sans',sans-serif;font-size:0.83rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:2px;margin-top:0.4rem;transition:background 0.2s;}
+.fsub-btn:hover{background:var(--gold);}
+/* TESTIMONIALS */
+.reviews{padding:5rem;background:var(--espresso);text-align:center;}
+.stars{color:var(--gold);margin-bottom:1.2rem;font-size:0.9rem;letter-spacing:0.1em;}
+.tq{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--stone);max-width:640px;margin:0 auto 1.2rem;line-height:1.65;}
+.tq::before{content:'\201C';color:var(--warm);}
+.tq::after{content:'\201D';color:var(--warm);}
+.ta{font-size:0.76rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm);}
+/* FOOTER */
+footer{background:#000;padding:3rem 5rem 2rem;}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(201,196,190,0.1);}
+.ft-logo{font-family:'Playfair Display',serif;color:var(--cream);font-size:1.2rem;text-decoration:none;display:block;margin-bottom:0.8rem;}
+.ft-logo span{font-style:italic;color:var(--stone);}
+.ft-brand p{font-size:0.82rem;color:var(--gray);line-height:1.7;margin-bottom:0.8rem;max-width:230px;}
+.ft-ci{font-size:0.82rem;color:var(--gray);margin-bottom:0.4rem;}
+.ft-ci a{color:var(--stone);text-decoration:none;}
+.ft-ct{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:1rem;}
+.ft-col a{display:block;font-size:0.8rem;color:var(--gray);text-decoration:none;margin-bottom:0.5rem;transition:color 0.2s;}
+.ft-col a:hover{color:var(--stone);}
+.ft-btm{display:flex;justify-content:space-between;font-size:0.72rem;color:rgba(115,115,115,0.5);flex-wrap:wrap;gap:0.5rem;}
+/* FADE */
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.fade.in{opacity:1;transform:translateY(0);}
+.fade:nth-child(2){transition-delay:0.08s;}
+.fade:nth-child(3){transition-delay:0.16s;}
+.fade:nth-child(4){transition-delay:0.24s;}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;}
+  .hero-right{height:300px;}
+  .hero-overlay{background:linear-gradient(to bottom,transparent,var(--espresso) 85%);}
+  .hero-left{padding:5rem 2rem 2.5rem;}
+  .bgrid{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:1fr 1fr;}
+  .steps::before{display:none;}
+  .form-sec{grid-template-columns:1fr;gap:3rem;}
+  nav,.benefits,.compare,.process,.form-sec,.reviews,footer{padding-left:2rem;padding-right:2rem;}
+  nav{padding-top:1rem;padding-bottom:1rem;}
+}
+@media(max-width:640px){
+  .bgrid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .frow{grid-template-columns:1fr;}
+  .ft-grid{grid-template-columns:1fr;}
+  .nav-back{font-size:0;}
+  .nav-back::before{content:'←';font-size:1rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔍 Dedicated Buyer Representation · Tri-Cities &amp; Yakima WA &nbsp;|&nbsp; <a href="tel:5095392945">(509) 539-2945</a></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Rinker <span>Realty</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+  <a href="https://calendly.com/jessicarinkerrealtor/30min" target="_blank" class="nav-cta">Book a Free Call</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Dedicated Buyer Representation · Tri-Cities WA</div>
+    <h1>Stop Losing<br>the Best Homes<br><em>to Faster Buyers.</em></h1>
+    <p class="hero-sub">One dedicated rep. 100% focused on you.</p>
+    <p class="hero-desc">In today's Tri-Cities market the best homes go fast. Jessica Rinker's Dedicated Buyer Rep program gives you off-market access, a rep who works exclusively for you, and a negotiation strategy that wins.</p>
+    <div class="badges">
+      <span class="badge">Off-Market Access</span>
+      <span class="badge">One Rep, One Client</span>
+      <span class="badge">Relocation Expert</span>
+      <span class="badge">Virtual Tours</span>
+    </div>
+    <div class="cta-row">
+      <a href="#buyer-form" class="btn btn-p">Start My Search</a>
+      <a href="https://calendly.com/jessicarinkerrealtor/30min" target="_blank" class="btn btn-g">Book a Call First</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&q=80&auto=format&fit=crop" alt="Beautiful home in the Tri-Cities">
+    <div class="hero-overlay"></div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+  <div class="sec-hdr">
+    <span class="sec-eye">What You Get</span>
+    <h2 class="sec-title">Why Buyers Choose<br><em>Dedicated Representation</em></h2>
+    <p class="sec-sub">Most agents juggle listings, buyers, and admin at once. Your dedicated rep wears one hat — yours.</p>
+  </div>
+  <div class="bgrid">
+    <div class="bc fade"><span class="bc-icon">🎯</span><h3 class="bt">One Rep, One Mission</h3><p class="bd">Your buyer's agent focuses exclusively on finding your home. No divided attention, no competing priorities. Faster response times and stronger offers when it matters most.</p></div>
+    <div class="bc fade"><span class="bc-icon">🔓</span><h3 class="bt">Off-Market Access</h3><p class="bd">We don't wait for Zillow. Proactive seller outreach, expired listing networks, and pre-market alerts give you access to homes days before other buyers even know they exist.</p></div>
+    <div class="bc fade"><span class="bc-icon">✈️</span><h3 class="bt">Relocation Specialist</h3><p class="bd">Moving from California, Oregon, or Washington? We handle virtual tours, neighborhood deep-dives, and can walk properties on your behalf before you fly in — so you only see the best.</p></div>
+    <div class="bc fade"><span class="bc-icon">💪</span><h3 class="bt">Negotiation Muscle</h3><p class="bd">Knowing how to write an offer that wins isn't just about price. Escalation clauses, inspection strategy, and seller motivation intel all factor in — and we use them all.</p></div>
+    <div class="bc fade"><span class="bc-icon">🗺️</span><h3 class="bt">Deep Local Knowledge</h3><p class="bd">Schools, flood zones, neighborhood appreciation rates, HOA red flags — we know what to look for and what to avoid in every pocket of Kennewick, Richland, Pasco, and Yakima.</p></div>
+    <div class="bc fade"><span class="bc-icon">🛡️</span><h3 class="bt">Love It or Leave It</h3><p class="bd">If the home isn't right after purchase, we sell it for you with zero listing fee. Built for relocation buyers who can't afford to make the wrong choice.</p></div>
+  </div>
+</section>
+
+<!-- Compare -->
+<section class="compare">
+  <div class="sec-hdr">
+    <span class="sec-eye">The Difference</span>
+    <h2 class="sec-title" style="color:var(--cream);">Dedicated Rep vs.<br><em style="color:var(--stone);">Typical Agent</em></h2>
+  </div>
+  <div class="ctable">
+    <div class="ct-head">
+      <span>Feature</span>
+      <span>Typical Agent</span>
+      <span>Jessica's Program</span>
+    </div>
+    <div class="ct-row"><span class="ct-feat">Focused only on your search</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Off-market property access</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Pre-market alerts</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Virtual tours for relocation buyers</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Proactive seller outreach</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Love It or Leave It guarantee</span><span class="ct-no">✗</span><span class="ct-yes">✓</span></div>
+    <div class="ct-row"><span class="ct-feat">Same-day offer capability</span><span class="ct-no">Sometimes</span><span class="ct-yes">Always</span></div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process">
+  <div class="sec-hdr">
+    <span class="sec-eye">How It Works</span>
+    <h2 class="sec-title">From Search<br><em>to Keys in Hand</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step fade"><div class="snum">01</div><h3 class="stitle">Tell Us What You Want</h3><p class="sdesc">Fill out the form below. We'll learn your must-haves, deal-breakers, timeline, and budget before we spend a minute searching.</p></div>
+    <div class="step fade"><div class="snum">02</div><h3 class="stitle">Custom Search Strategy</h3><p class="sdesc">Your dedicated rep builds a search plan that goes beyond the MLS — including off-market leads, pre-market alerts, and proactive outreach.</p></div>
+    <div class="step fade"><div class="snum">03</div><h3 class="stitle">Tour &amp; Narrow Down</h3><p class="sdesc">In-person or virtual tours on your schedule. We walk you through every property with honest insight — not just a door key and a smile.</p></div>
+    <div class="step fade"><div class="snum">04</div><h3 class="stitle">Offer, Win &amp; Close</h3><p class="sdesc">When you find the one, we move fast. Strategic offer preparation, expert negotiation, and guided closing from contract to keys.</p></div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="form-sec" id="buyer-form">
+  <div class="fc">
+    <span class="sec-eye">Start Your Search</span>
+    <h2 class="sec-title">Let's Find<br><em>Your Home</em></h2>
+    <p style="font-size:0.92rem;color:var(--gray);line-height:1.75;margin:1rem 0;">Tell us what you're looking for and Jessica will reach out within 24 hours to start your dedicated buyer search.</p>
+    <div class="checks">
+      <div class="chk"><span>✓</span> No cost to buyers — we're paid at closing</div>
+      <div class="chk"><span>✓</span> Off-market access from day one</div>
+      <div class="chk"><span>✓</span> Virtual tours available for relocation buyers</div>
+      <div class="chk"><span>✓</span> Response within 24 hours</div>
+    </div>
+    <div style="margin-top:1rem;">
+      <a href="https://jessicarinker.exprealty.com" target="_blank" class="btn btn-p">Browse Active Listings →</a>
+    </div>
+  </div>
+  <div class="fwrap">
+    <div class="ftitle">Start Your Buyer Search</div>
+    <p class="fsub">Tell us what you're looking for and we'll get to work.</p>
+    <form action="https://formspree.io/f/meepkdod" method="POST">
+      <input type="hidden" name="_subject" value="New Buyer Inquiry - Rinker Realty">
+      <input type="hidden" name="_next" value="https://jessrinker76.github.io/rinkerrealty/thankyou.html">
+      <div class="frow">
+        <div class="fg">
+          <label>First Name</label>
+          <input type="text" name="first_name" placeholder="Jessica" required>
+        </div>
+        <div class="fg">
+          <label>Last Name</label>
+          <input type="text" name="last_name" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="you@email.com" required>
+      </div>
+      <div class="fg">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="(509) 000-0000">
+      </div>
+      <div class="fg">
+        <label>Where are you moving from?</label>
+        <input type="text" name="moving_from" placeholder="Seattle WA, Sacramento CA...">
+      </div>
+      <div class="fg">
+        <label>Preferred Area</label>
+        <select name="preferred_area">
+          <option>Kennewick</option>
+          <option>Richland</option>
+          <option>Pasco</option>
+          <option>West Richland</option>
+          <option>Yakima</option>
+          <option>Open to all areas</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Budget Range</label>
+        <select name="budget">
+          <option>Under $300,000</option>
+          <option>$300,000 – $400,000</option>
+          <option>$400,000 – $550,000</option>
+          <option>$550,000 – $750,000</option>
+          <option>$750,000+</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Timeline to Buy</label>
+        <select name="timeline">
+          <option>As soon as possible</option>
+          <option>Within 3 months</option>
+          <option>3–6 months</option>
+          <option>6–12 months</option>
+          <option>Just researching</option>
+        </select>
+      </div>
+      <button type="submit" class="fsub-btn">Start My Search →</button>
+    </form>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="reviews">
+  <div class="stars">★★★★★</div>
+  <p class="tq">As a relocating buyer from California, I was nervous about buying sight-unseen. Jessica's virtual tours and local expertise made me feel completely confident. Best decision we ever made.</p>
+  <div class="ta">Sarah &amp; David K. · Richland, WA (relocated from CA)</div>
+  <div style="margin-top:2.2rem;">
+    <a href="https://calendly.com/jessicarinkerrealtor/30min" target="_blank" class="btn btn-p">Book a Free Buyer Consultation</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a href="index.html" class="ft-logo">Rinker <span>Realty</span></a>
+      <p>Honest guidance. Strategic marketing. Dedicated representation across the Tri-Cities and Yakima.</p>
+      <div class="ft-ci">📞 <a href="tel:5095392945">(509) 539-2945</a></div>
+      <div class="ft-ci">📧 <a href="mailto:jessicarinkerrealtor@gmail.com">jessicarinkerrealtor@gmail.com</a></div>
+    </div>
+    <div class="ft-col">
+      <div class="ft-ct">Services</div>
+      <a href="https://jessicarinker.exprealty.com/seller/valuation/" target="_blank">Worry-Free Listing</a>
+      <a href="buyer-rep.html">Dedicated Buyer Rep</a>
+      <a href="https://jessicarinker.exprealty.com/pages/text-lead" target="_blank">Instant Cash Offer</a>
+      <a href="listing-diagnostic.html">Expired Listing Help</a>
+    </div>
+    <div class="ft-col">
+      <div class="ft-ct">Quick Links</div>
+      <a href="index.html">Home</a>
+      <a href="https://jessicarinker.exprealty.com" target="_blank">Search All Homes</a>
+      <a href="https://calendly.com/jessicarinkerrealtor/30min" target="_blank">Book a Call</a>
+      <a href="tel:5095392945">(509) 539-2945</a>
+    </div>
+  </div>
+  <div class="ft-btm">
+    <span>© 2026 Rinker Realty · Jessica Rinker · eXp Realty · All Rights Reserved</span>
+    <span>Licensed Washington State REALTOR®</span>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), {threshold:0.12});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.background = window.scrollY > 60 ? 'rgba(18,13,9,0.99)' : 'rgba(18,13,9,0.95)';
+});
+</script>
+</body>
+</html>
